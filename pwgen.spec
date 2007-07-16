@@ -2,10 +2,10 @@ Name:         pwgen
 URL:          http://sourceforge.net/projects/pwgen/
 License:      GPL
 Group:        Text tools
-Version:      2.05
-Release:      %mkrel 2
+Version:      2.06
+Release:      %mkrel 1
 Summary:      Password generator
-Source:       http://belnet.dl.sourceforge.net/sourceforge/pwgen/pwgen-%{version}.tar.bz2
+Source:       http://belnet.dl.sourceforge.net/sourceforge/pwgen/pwgen-%{version}.tar.gz
 Source1:      ftp://ftp.linpeople.org/pub/People/lilo/source/makepasswd-1.10.tar.bz2
 BuildRoot:    %{_tmppath}/%{name}-%{version}-build
 BuildRequires: perl
@@ -50,5 +50,3 @@ rm -rf ${RPM_BUILD_ROOT}
 %{_mandir}/man1/*
 %_bindir/makepasswd2
 %_bindir/pwgen
-
-
