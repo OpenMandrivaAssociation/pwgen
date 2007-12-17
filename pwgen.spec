@@ -7,7 +7,6 @@ Release:      %mkrel 1
 Summary:      Password generator
 Source:       http://belnet.dl.sourceforge.net/sourceforge/pwgen/pwgen-%{version}.tar.gz
 Source1:      ftp://ftp.linpeople.org/pub/People/lilo/source/makepasswd-1.10.tar.bz2
-BuildRoot:    %{_tmppath}/%{name}-%{version}-build
 BuildRequires: perl
 BuildRequires: zlib-devel
 
