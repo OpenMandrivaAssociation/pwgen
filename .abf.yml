@@ -1,3 +1,5 @@
+removed_sources:
+  pwgen-2.06.tar.gz: 43dc4fbe6c3bdf96ae24b20d44c4a4584df93d8e
 sources:
-  "makepasswd-1.10.tar.bz2": c707c46f5d74706f266682e6fed818584bf9d507
-  "pwgen-2.06.tar.gz": 43dc4fbe6c3bdf96ae24b20d44c4a4584df93d8e
+  makepasswd-1.10.tar.bz2: c707c46f5d74706f266682e6fed818584bf9d507
+  pwgen-2.07.tar.gz: 51180f9cd5530d79eea18b2443780dec4ec5ea43
