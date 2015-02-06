@@ -3,7 +3,7 @@ URL:          http://sourceforge.net/projects/pwgen/
 License:      GPL
 Group:        Text tools
 Version:      2.07
-Release:      1
+Release:      2
 Summary:      Password generator
 Source:       http://belnet.dl.sourceforge.net/sourceforge/pwgen/pwgen-%{version}.tar.gz
 Source1:      ftp://ftp.linpeople.org/pub/People/lilo/source/makepasswd-1.10.tar.bz2
