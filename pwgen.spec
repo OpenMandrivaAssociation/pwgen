@@ -2,11 +2,11 @@ Name:         pwgen
 URL:          http://sourceforge.net/projects/pwgen/
 License:      GPL
 Group:        Text tools
-Version:      2.07
-Release:      2
+Version:      2.08
+Release:      1
 Summary:      Password generator
-Source:       http://belnet.dl.sourceforge.net/sourceforge/pwgen/pwgen-%{version}.tar.gz
-Source1:      ftp://ftp.linpeople.org/pub/People/lilo/source/makepasswd-1.10.tar.bz2
+Source:       http://prdownloads.sourceforge.net/pwgen/pwgen-%{version}.tar.gz
+Source1:      https://salsa.debian.org/debian/makepasswd/-/archive/master/makepasswd-master.tar.bz2
 BuildRequires: perl
 BuildRequires: zlib-devel
 
@@ -23,19 +23,20 @@ Authors:
 
 %prep
 %setup -q -b 1
-cd ../makepasswd-1.10
+%autopatch -p1
+cd ../makepasswd-master
 chmod 644 *
 
 %build
 autoconf
 %configure
-%make
+%make_build
 
 %install
 mkdir -p	%{buildroot}%{_bindir}
 mkdir -p	%{buildroot}%{_mandir}/man1
-%makeinstall_std
-cd ../makepasswd-1.10
+%make_install
+cd ../makepasswd-master
 install -m 755 makepasswd	%{buildroot}%{_bindir}/makepasswd2
 install -m 644 makepasswd.1	%{buildroot}%{_mandir}/man1/makepasswd2.1
 
@@ -43,5 +44,3 @@ install -m 644 makepasswd.1	%{buildroot}%{_mandir}/man1/makepasswd2.1
 %{_mandir}/man1/*
 %{_bindir}/makepasswd2
 %{_bindir}/pwgen
-
-
