@@ -8,7 +8,7 @@ Summary:      Password generator
 Source:       http://prdownloads.sourceforge.net/pwgen/pwgen-%{version}.tar.gz
 Source1:      https://salsa.debian.org/debian/makepasswd/-/archive/master/makepasswd-master.tar.bz2
 BuildRequires: perl
-BuildRequires: zlib-devel
+BuildRequires: pkgconfig(zlib)
 
 %description
 pwgen generates random, meaningless but pronounceable and thus easy to
@@ -33,14 +33,14 @@ autoconf
 %make_build
 
 %install
-mkdir -p	%{buildroot}%{_bindir}
-mkdir -p	%{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_bindir}
+mkdir -p %{buildroot}%{_mandir}/man1
 %make_install
 cd ../makepasswd-master
-install -m 755 makepasswd	%{buildroot}%{_bindir}/makepasswd2
-install -m 644 makepasswd.1	%{buildroot}%{_mandir}/man1/makepasswd2.1
+install -m 755 makepasswd %{buildroot}%{_bindir}/makepasswd2
+install -m 644 makepasswd.1 %{buildroot}%{_mandir}/man1/makepasswd2.1
 
 %files
-%{_mandir}/man1/*
+%doc %{_mandir}/man1/*
 %{_bindir}/makepasswd2
 %{_bindir}/pwgen
