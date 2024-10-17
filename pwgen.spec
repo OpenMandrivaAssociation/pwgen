@@ -1,5 +1,5 @@
 Name:         pwgen
-URL:          http://sourceforge.net/projects/pwgen/
+URL:          https://sourceforge.net/projects/pwgen/
 License:      GPL
 Group:        Text tools
 Version:      2.08
