@@ -7,6 +7,11 @@ Release:      1
 Summary:      Password generator
 Source:       http://prdownloads.sourceforge.net/pwgen/pwgen-%{version}.tar.gz
 Source1:      https://salsa.debian.org/debian/makepasswd/-/archive/master/makepasswd-master.tar.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: perl
 BuildRequires: pkgconfig(zlib)
 
